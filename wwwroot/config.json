@@ -1,7 +1,7 @@
 {
     /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
     initializationUrls: [
-        "simple"
+        "mvttest"
     ],
     parameters: {
         googleUrlShortenerKey: null,
@@ -43,20 +43,24 @@
             link: "http://www.example.com"
         },*/
         // This is used in various text messages. You should also set <title> in index.html
-        appName: "Terria Map",
+        appName: "Greenprints Mapping Tool",
 
         // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
         brandBarElements: [
             "",
-            "<a target=\"_blank\" href=\"https://terria.io\"><img src=\"images/terria_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
+            "<a target=\"_blank\" href=\"https://www.greenprints.org.au/\"><img src=\"public/img/aela.jpg\" height=\"187\" title=\"Version: {{version}}\" /></a>",
             ""
         ],
         // Shown when things go wrong.
-        supportEmail: "help@example.com",
+        supportEmail: "admin@blip2.net",
         // You probably shouldn't change this.
         proj4ServiceBaseUrl: "proj4def/",
         // Or this
         feedbackUrl: "feedback",
+
+        cesiumIonAccessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5Yjc0M2U2ZC02YWE0LTQxODgtYTJlZi1jMTcxZWU2OTAzMTMiLCJpZCI6MjA3NjYsInNjb3BlcyI6WyJhc2wiLCJhc3IiLCJnYyJdLCJpYXQiOjE1NzgzMDM3MDV9._nzUgZJHy6FLVLNyLNpeh3HM7suI7UYbczPsgjbl_o4",
+    
+        bingMapsKey: "An-LmMzhgCW4ztNMhkzAU2DmbNtGc2WAuaf5nxo0fniblUeAAnsIGDUkIj69aZcL",
 
         // Default mobile viewer mode when loading the map for the first time on mobile platforms.
         // Options are: "3DTerrain", "3DSmooth", "2D"
@@ -77,15 +81,6 @@
         // True to display in-app guides.
         // "showInAppGuides": false,
 
-        "helpContent": [
-            {
-                "itemName": "gettingstarted",
-                "markdownText": "# Getting started with the map\n\nIf you're new to the map or using spatial data, our Getting Started video quickly covers the basic functionality you'll need to use to add and interrogate data sets.\n\nIf you don't have time to watch the video, we suggest exploring the following areas:\n\n1. Search for a location to quickly find an area of interest\n2. Use 'Explore map data' to view the catalogue of available data sets and add them to the map\n3. Interact with the data layer, including opacity and toggling on and off on the left in your workbench\n4. Click on the data on the map to view more detailed data, including the raw data\n5. Change your basemap using options in 'Map Settings' to help make some data sets more visible\n6. Zoom and change your view, including tilting the view angle using the controls on the right-hand side of the screen",
-                "icon": "video",
-                "videoUrl": "https://www.youtube.com/embed/NTtSM70rIvI",
-                "placeholderImage": "https://img.youtube.com/vi/NTtSM70rIvI/maxresdefault.jpg"
-            }
-        ]
     }
 }
 
