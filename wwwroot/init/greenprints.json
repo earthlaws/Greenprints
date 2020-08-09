@@ -1,0 +1,132 @@
+{
+    "corsDomains" : [
+        "data.gov.au",
+        "ga.gov.au",
+        "corsproxy.com",
+        "cartodb-basemaps-a.global.ssl.fastly.net",
+        "cartodb-basemaps-b.global.ssl.fastly.net",
+        "cartodb-basemaps-c.global.ssl.fastly.net",
+        "programs.communications.gov.au",
+        "greenprints.blip2.net",
+        "gisservices.information.qld.gov.au",
+        "www.environment.gov.au",
+        "www.asris.csiro.au",
+        "services2.arcgis.com"
+    ],
+    "homeCamera": {
+        "north": -8,
+        "east": 158,
+        "south": -45,
+        "west": 109
+    },
+    "baseMapName": "Positron (Light)",
+    //"initialViewerMode": "2d",
+    "services": [],
+    "catalog": [
+        {
+            "name": "Queensland Datasets",
+            "type": "group",
+            "items": [
+                {
+                    "name": "Local Government Area (QLD)",
+                    "type": "esri-mapServer",
+                    "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/20",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                    "featureInfoTemplate" : {
+                        "template": "Local Council: {{LGA}}"
+                    }
+                },
+                {
+                    "name": "Property Ownership (QLD)",
+                    "type": "esri-mapServer",
+                    "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/13",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                    "featureInfoTemplate" : {
+                        "template": "Tenure: {{Tenure}}"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "National Datasets",
+            "type": "group",
+            "items": [
+                {
+                    "name": "Watercourses and Dams",
+                    "type": "esri-mapServer",
+                    "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Lines/MapServer",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                },
+                {
+                    "name": "Historic Native Vegetation (pre-1750)",
+                    "type": "wms",
+                    "url": "https://www.environment.gov.au/mapping/services/ogc_services/NVIS_pre_mvg/MapServer/WMSServer",
+                    "layers": "NVIS_PRE_MVG",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                },
+                {
+                    "name": "Present Native Vegetation",
+                    "type": "wms",
+                    "url": "https://www.environment.gov.au/mapping/services/ogc_services/NVIS_ext_mvg/MapServer/WMSServer",
+                    "layers": "NVIS_EXT_MVG",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                },            
+                {
+                    "name": "Land Use Map",
+                    "type": "esri-mapServer",
+                    "url": "https://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_current/MapServer/0",
+                    "opacity": 0.25,
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                    "featureInfoTemplate" : {
+                        "template": "Land Use: {{C18_DESCRI}}"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Greenprints Layers",
+            "type": "group",
+            "items": [
+                {
+                    "type": "mvt",
+                    "name": "Sub-Bioregions",
+                    "url": "https://greenprints.blip2.net/services/subregions/tiles/{z}/{x}/{y}.pbf",
+                    "serverMinZoom": 0,
+                    "serverMaxZoom": 10,
+                    "layer": "ibra7_subregions",
+                    "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
+                    "description": "IBRA7 Sub-Bioregions",
+                    "isShown": true,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "type": "mvt",
+                    "name": "Bioregions",
+                    "url": "https://greenprints.blip2.net/services/regions/tiles/{z}/{x}/{y}.pbf",
+                    "serverMinZoom": 0,
+                    "serverMaxZoom": 10,
+                    "layer": "ibra7_regions",
+                    "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
+                    "description": "IBRA7 Bioregions",
+                    "isShown": true,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                }
+            ]
+        }
+    ],
+    "viewerMode": "2d"
+}

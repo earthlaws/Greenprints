@@ -1,17 +1,17 @@
 {
     /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
     initializationUrls: [
-        "terria"
+        "greenprints"
     ],
     parameters: {
         googleUrlShortenerKey: null,
         googleAnalyticsKey: null,
         googleAnalyticsOptions: null,
-        /* Text that appears at the bottom of the map */
+        /* Text that appears at the bottom of the map
         disclaimer: {
-            text: "Disclaimer: This map must not be used for navigation or precise spatial analysis",
+            text: "Disclaimer: This map must not be used for commercial purposes or precise spatial analysis",
             url: ""
-        },
+        }, */
         /*
         // Text that will be added to any pages printed from your site.
         printDisclaimer:{
@@ -19,7 +19,7 @@
             url: "#"
         },
         */
-         
+
         // Pop-up disclaimer that will be shown at the start
         // The text of the disclaimer is in lib/Views/GlobalDisclaimer.html
         // globalDisclaimer: {
@@ -32,27 +32,31 @@
         //     //devHostRegex: "\\b(staging|preview|test|dev)\\.",
         //     enableOnLocalhost: true // If false, don't show this when running on localhost
         // },
-        
+
         /*
         developerAttribution: {
             text: "Your organisation",
             link: "http://www.example.com"
         },*/
         // This is used in various text messages. You should also set <title> in index.html
-        appName: "Terria Map",
+        appName: "Greenprints Map",
 
         // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
         brandBarElements: [
             "",
-            "<a target=\"_blank\" href=\"https://terria.io\"><img src=\"images/terria_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
+            "<a target=\"_blank\" href=\"https://www.greenprints.org.au/\"><img src=\"public/img/aela.jpg\" height=\"187\" title=\"Version: {{version}}\" /></a>",
             ""
         ],
         // Shown when things go wrong.
-        supportEmail: "help@example.com",
+        supportEmail: "admin@blip2.net",
         // You probably shouldn't change this.
         proj4ServiceBaseUrl: "proj4def/",
         // Or this
         feedbackUrl: "feedback",
+
+        cesiumIonAccessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5Yjc0M2U2ZC02YWE0LTQxODgtYTJlZi1jMTcxZWU2OTAzMTMiLCJpZCI6MjA3NjYsInNjb3BlcyI6WyJhc2wiLCJhc3IiLCJnYyJdLCJpYXQiOjE1NzgzMDM3MDV9._nzUgZJHy6FLVLNyLNpeh3HM7suI7UYbczPsgjbl_o4",
+
+        bingMapsKey: "An-LmMzhgCW4ztNMhkzAU2DmbNtGc2WAuaf5nxo0fniblUeAAnsIGDUkIj69aZcL",
 
         // Default mobile viewer mode when loading the map for the first time on mobile platforms.
         // Options are: "3DTerrain", "3DSmooth", "2D"
