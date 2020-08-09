@@ -2,12 +2,8 @@
     "corsDomains" : [
         "data.gov.au",
         "ga.gov.au",
-        "corsproxy.com",
-        "cartodb-basemaps-a.global.ssl.fastly.net",
-        "cartodb-basemaps-b.global.ssl.fastly.net",
-        "cartodb-basemaps-c.global.ssl.fastly.net",
+        "fastly.net",
         "programs.communications.gov.au",
-        "greenprints.blip2.net",
         "gisservices.information.qld.gov.au",
         "www.environment.gov.au",
         "www.asris.csiro.au",
@@ -20,7 +16,6 @@
         "west": 109
     },
     "baseMapName": "Positron (Light)",
-    //"initialViewerMode": "2d",
     "services": [],
     "catalog": [
         {
@@ -61,7 +56,7 @@
                     "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Lines/MapServer",
                     "isShown": false,
                     "isEnabled": true,
-                    "isLegendVisible": false,
+                    "isLegendVisible": false
                 },
                 {
                     "name": "Historic Native Vegetation (pre-1750)",
@@ -70,7 +65,7 @@
                     "layers": "NVIS_PRE_MVG",
                     "isShown": false,
                     "isEnabled": true,
-                    "isLegendVisible": false,
+                    "isLegendVisible": false
                 },
                 {
                     "name": "Present Native Vegetation",
@@ -79,7 +74,7 @@
                     "layers": "NVIS_EXT_MVG",
                     "isShown": false,
                     "isEnabled": true,
-                    "isLegendVisible": false,
+                    "isLegendVisible": false
                 },            
                 {
                     "name": "Land Use Map",
@@ -103,11 +98,11 @@
                     "type": "mvt",
                     "name": "Sub-Bioregions",
                     "url": "https://greenprints.blip2.net/services/subregions/tiles/{z}/{x}/{y}.pbf",
-                    "serverMinZoom": 0,
-                    "serverMaxZoom": 10,
+                    "maximumNativeZoom": 10,
                     "layer": "ibra7_subregions",
                     "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
                     "description": "IBRA7 Sub-Bioregions",
+                    "opacity": "0.4",
                     "isShown": true,
                     "isEnabled": true,
                     "isLegendVisible": false
@@ -116,12 +111,12 @@
                     "type": "mvt",
                     "name": "Bioregions",
                     "url": "https://greenprints.blip2.net/services/regions/tiles/{z}/{x}/{y}.pbf",
-                    "serverMinZoom": 0,
-                    "serverMaxZoom": 10,
+                    "maximumNativeZoom": 10,
                     "layer": "ibra7_regions",
                     "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
                     "description": "IBRA7 Bioregions",
-                    "isShown": true,
+                    "opacity": "0.4",
+		    "isShown": true,
                     "isEnabled": true,
                     "isLegendVisible": false
                 }
