@@ -9,10 +9,10 @@
         "services2.arcgis.com"
     ],
     "initialCamera": {
-        "north": -8,
-        "east": 158,
-        "south": -45,
-        "west": 109
+        "north": -24,
+        "east": 153,
+        "south": -29,
+        "west": 142
     },
     "baseMapName": "Positron (Light)",
     "services": [],
@@ -66,7 +66,7 @@
                     "name": "Watercourses and Dams",
                     "type": "esri-mapServer",
                     "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Lines/MapServer",
-                    "isShown": false,
+                    "isShown": true,
                     "isEnabled": true,
                     "isLegendVisible": false
                 },
@@ -93,7 +93,7 @@
                     "type": "esri-mapServer",
                     "url": "https://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_current/MapServer/0",
                     "opacity": 0.25,
-                    "isShown": false,
+                    "isShown": true,
                     "isEnabled": true,
                     "isLegendVisible": false,
                     "featureInfoTemplate" : {
@@ -128,6 +128,16 @@
                     "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
                     "description": "IBRA7 Bioregions",
                     "opacity": "0.4",
+		            "isShown": true,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "type": "geojson",
+                    "name": "NRM Region",
+                    "url": "/data/nrm_regions.json",
+                    "description": "NRM Regions",
+                    "opacity": "0.9",
 		            "isShown": true,
                     "isEnabled": true,
                     "isLegendVisible": false
