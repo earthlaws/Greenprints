@@ -1,0 +1,182 @@
+{
+    "corsDomains" : [
+        "data.gov.au",
+        "ga.gov.au",
+        "fastly.net",
+        "programs.communications.gov.au",
+        "gisservices.information.qld.gov.au"
+    ],
+    "initialCamera": {
+        "north": -26,
+        "east": 153.3,
+        "south": -27.5,
+        "west": 152.3
+    },
+    "baseMapName": "Positron (Light)",
+    "services": [],
+    "catalog": [
+        {
+            "name": "Queensland Datasets",
+            "type": "group",
+            "items": [
+                {
+                    "type": "mvt",
+                    "name": "Grazing Land Management Types",
+                    "url": "https://greenprints.blip2.net/services/grazinglandmanagement/tiles/{z}/{x}/{y}.pbf",
+                    "maximumNativeZoom": 11,
+                    "layer": "DAFQLD_GLM_LANDTYPE_5_4",
+                    "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
+                    "description": "Grazing Land Management Types",
+                    "opacity": "0.4",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "name": "Local Government Area (QLD)",
+                    "type": "esri-mapServer",
+                    "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/20",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                    "featureInfoTemplate" : {
+                        "template": "Local Council: {{LGA}}"
+                    }
+                },
+                {
+                    "name": "Property Ownership (QLD)",
+                    "type": "esri-mapServer",
+                    "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer/13",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                    "featureInfoTemplate" : {
+                        "template": "Tenure: {{Tenure}}"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "National Datasets",
+            "type": "group",
+            "items": [
+                {
+                    "name": "Regional ecosystems (Pre-clear)",
+                    "type": "esri-mapServer",
+                    "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Biota/VegetationManagement/MapServer/15",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "name": "National Pollutant Inventory",
+                    "type": "wms",
+                    "url": "https://data.gov.au/geoserver/npi/wms",
+                    "layers": "ckan_043f58e0_a188_4458_b61c_04e5b540aea4",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "name": "Watercourses and Dams",
+                    "type": "esri-mapServer",
+                    "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Lines/MapServer",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "name": "Historic Native Vegetation (pre-1750)",
+                    "type": "wms",
+                    "url": "https://www.environment.gov.au/mapping/services/ogc_services/NVIS_pre_mvg/MapServer/WMSServer",
+                    "layers": "NVIS_PRE_MVG",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "name": "Present Native Vegetation",
+                    "type": "wms",
+                    "url": "https://www.environment.gov.au/mapping/services/ogc_services/NVIS_ext_mvg/MapServer/WMSServer",
+                    "layers": "NVIS_EXT_MVG",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },            
+                {
+                    "name": "Land Use Map",
+                    "type": "esri-mapServer",
+                    "url": "https://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_current/MapServer/0",
+                    "opacity": 0.25,
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                    "featureInfoTemplate" : {
+                        "template": "Land Use: {{C18_DESCRI}}"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Greenprints Layers",
+            "type": "group",
+            "items": [
+                {
+                    "type": "mvt",
+                    "name": "Sub-Bioregions (others)",
+                    "url": "https://greenprints.blip2.net/services/subregions_scex/tiles/{z}/{x}/{y}.pbf",
+                    "maximumNativeZoom": 10,
+                    "layer": "ibra7_subregions_scex",
+                    "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
+                    "description": "IBRA7 Sub-Bioregions (others)",
+                    "opacity": "0.9",
+                    "lineColor": "#cccccc",
+                    "fillColor": "#cccccc",
+                    "isShown": true,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "type": "mvt",
+                    "name": "Sub-Bioregions (Sunshine Coast)",
+                    "url": "https://greenprints.blip2.net/services/subregions_scin/tiles/{z}/{x}/{y}.pbf",
+                    "maximumNativeZoom": 10,
+                    "layer": "ibra7_subregions_scin",
+                    "rectangle": [151.768971,-28.673448,153.63834,-24.437426],
+                    "description": "IBRA7 Sub-Bioregions (Sunshine Coast)",
+                    "opacity": "0.4",
+                    "isShown": true,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
+                {
+                    "type": "mvt",
+                    "name": "Sub-Bioregions",
+                    "url": "https://greenprints.blip2.net/services/subregions/tiles/{z}/{x}/{y}.pbf",
+                    "maximumNativeZoom": 10,
+                    "layer": "ibra7_subregions",
+                    "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
+                    "description": "IBRA7 Sub-Bioregions",
+                    "opacity": "0.4",
+                    "isShown": false,
+                    "isEnabled": false,
+                    "isLegendVisible": false
+                },
+                {
+                    "type": "mvt",
+                    "name": "Bioregions",
+                    "url": "https://greenprints.blip2.net/services/regions/tiles/{z}/{x}/{y}.pbf",
+                    "maximumNativeZoom": 10,
+                    "layer": "ibra7_regions",
+                    "rectangle": [72.577376,-54.776993,167.99814,-9.14129],
+                    "description": "IBRA7 Bioregions",
+                    "opacity": "0.4",
+		            "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                }
+            ]
+        }
+    ],
+    "viewerMode": "2d"
+}
