@@ -4,9 +4,7 @@
         "ga.gov.au",
         "fastly.net",
         "programs.communications.gov.au",
-        "gisservices.information.qld.gov.au",
-        "www.asris.csiro.au",
-        "services2.arcgis.com"
+        "gisservices.information.qld.gov.au"
     ],
     "initialCamera": {
         "north": -24,
@@ -62,6 +60,24 @@
             "name": "National Datasets",
             "type": "group",
             "items": [
+                {
+                    "name": "Regional ecosystems (Pre-clear)",
+                    "type": "esri-mapServer",
+                    "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Biota/VegetationManagement/MapServer/15",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false,
+                    "maximumScale": 5000
+                },
+                {
+                    "name": "National Pollutant Inventory",
+                    "type": "wms",
+                    "url": "https://data.gov.au/geoserver/npi/wms",
+                    "layers": "ckan_043f58e0_a188_4458_b61c_04e5b540aea4",
+                    "isShown": false,
+                    "isEnabled": true,
+                    "isLegendVisible": false
+                },
                 {
                     "name": "Watercourses and Dams",
                     "type": "esri-mapServer",
@@ -137,7 +153,6 @@
                     "name": "NRM Region",
                     "url": "/data/nrm_regions.json",
                     "description": "NRM Regions",
-                    "opacity": "0.9",
 		            "isShown": true,
                     "isEnabled": true,
                     "isLegendVisible": false
