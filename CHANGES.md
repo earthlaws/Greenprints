@@ -9,6 +9,10 @@ Change Log
 * Allow translation overrides via gulp
 * Re-enabled disclaimer via newly ported disclaimer component
 * Re-enabled measure tool
+* Development builds sped up by 3~20x - ts-loader is now optional & TypeScript being transpiled by babel-loader, keeping type check safety on a separate thread
+* Added default help content & `languageOverrides.json` for i18n
+* Add back updateApplicationOnMessageFromParentWindow
+* Update youtube urls to nocookie version
 
 ### Next Release
 
