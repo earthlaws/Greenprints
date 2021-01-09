@@ -32,7 +32,10 @@ import "./global.scss";
 export default function UserInterface(props) {
   return (
     <StandardUserInterface {...props} version={version}>
-      <MenuLeft></MenuLeft>
+      <MenuLeft>
+        <MenuItem caption="About" href="about.html" key="about-link" />
+        <RelatedMaps viewState={props.viewState} />
+      </MenuLeft>
       <Nav>
         <MeasureTool terria={props.viewState.terria} key="measure-tool" />
       </Nav>
